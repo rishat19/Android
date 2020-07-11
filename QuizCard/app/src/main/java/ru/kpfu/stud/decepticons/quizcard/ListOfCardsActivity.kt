@@ -16,6 +16,11 @@ class ListOfCardsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        button_back.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         rv_cards.adapter = CardAdapter(CardsRepository.cards) { id ->
             val intent = Intent(this, CardInfoActivity::class.java)
             intent.putExtra("ID", id)

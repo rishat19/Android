@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //CardsRepository.cards.add(Card(0, "Table", "Стол"))
 
         button_for_list_of_cards.setOnClickListener {
             val intent = Intent(this, ListOfCardsActivity::class.java)
@@ -29,8 +28,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onStop() {
+        super.onStop()
         pref = getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE)
         val editor = pref.edit()
         CardsRepository.cards.forEach {

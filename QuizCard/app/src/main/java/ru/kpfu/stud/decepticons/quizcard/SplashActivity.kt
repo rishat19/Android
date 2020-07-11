@@ -15,6 +15,11 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        //CardsRepository.cards.add(Card(0, "Table", "Стол"))
+        //CardsRepository.cards.add(Card(1, "Tea", "Чай"))
+        //CardsRepository.cards.add(Card(2, "Cat", "Кошка"))
+        //CardsRepository.cards.add(Card(3, "Dog", "Собака"))
+        //CardsRepository.cards.add(Card(4, "Ball", "Мяч"))
         pref = getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE)
         if (pref.contains(APP_PREFERENCES_SAVED_CARDS)) {
             savedCards = (pref.getStringSet(APP_PREFERENCES_SAVED_CARDS, null) as HashSet<String>?)!!

@@ -18,7 +18,7 @@ class Card(val id: Int, val engText: String, val ruText: String) {
     }
 
     override fun toString(): String {
-        return "'$engText' + '~' + '$ruText'"
+        return "$engText~$ruText"
     }
 
 }

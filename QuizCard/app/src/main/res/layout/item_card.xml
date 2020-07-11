@@ -3,21 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="64dp"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:background="@color/primary">
+    android:layout_height="128dp"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:background="@color/accent">
 
     <TextView
+        style="@style/TextView1"
         android:id="@+id/tv_card"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:textColor="@color/primary_text"
-        android:textSize="16sp"
+        android:textSize="22sp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         tools:text="Kazan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

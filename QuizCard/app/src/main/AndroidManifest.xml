@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CardAddingActivity"></activity>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -22,6 +21,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ListOfCardsActivity" />
         <activity android:name=".CardInfoActivity" />
+        <activity android:name=".CardAddingActivity" />
     </application>
 
 </manifest>

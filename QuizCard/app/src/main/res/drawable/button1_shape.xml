@@ -7,10 +7,10 @@
         android:width="8dp"
         android:color="@color/primary_dark" />
     <corners
-        android:topLeftRadius="8dp"
-        android:topRightRadius="8dp"
-        android:bottomRightRadius="8dp"
-        android:bottomLeftRadius="8dp" />
+        android:topLeftRadius="16dp"
+        android:topRightRadius="16dp"
+        android:bottomRightRadius="16dp"
+        android:bottomLeftRadius="16dp" />
     <gradient
         android:angle="45"
         android:centerX="10%"
