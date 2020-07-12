@@ -24,4 +24,8 @@
         <item name="android:background">@drawable/text_view1</item>
     </style>
 
+    <style name="TextView2">
+        <item name="android:background">@drawable/text_view2</item>
+    </style>
+
 </resources>

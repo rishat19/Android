@@ -4,6 +4,159 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/accent"
     tools:context=".CardAddingActivity">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/primary_dark"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_for_save"
+        android:background="@drawable/icon_check"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view1"/>
+
+    <Button
+        android:id="@+id/button_back"
+        android:background="@drawable/icon_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view1"/>
+
+    <TextView
+        style="@style/TextView2"
+        android:id="@+id/tv_new_card"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        android:text="@string/new_card"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        style="@style/TextView2"
+        android:id="@+id/tv_english_text"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        android:text="@string/english"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <ImageView
+        android:id="@+id/flag_of_great_britain"
+        android:contentDescription="@string/flag_of_great_britain"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/icon_great_britain"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@drawable/icon_great_britain" />
+
+    <EditText
+        style="@style/TextView1"
+        android:id="@+id/et_english_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:inputType="textMultiLine"
+        android:textSize="16sp"
+        android:textColor="@color/primary_text"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical"
+        android:hint="@string/enter_text"
+        android:textColorHint="@color/secondary_text"
+        android:minLines="5"
+        android:maxLines="8"
+        android:autofillHints=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_english_text" />
+
+    <TextView
+        style="@style/TextView2"
+        android:id="@+id/tv_russian_text"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        android:text="@string/russian"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_english_text" />
+
+    <ImageView
+        android:id="@+id/flag_of_russia"
+        android:contentDescription="@string/flag_of_russia"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/icon_russia"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/et_english_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@drawable/icon_russia" />
+
+    <EditText
+        style="@style/TextView1"
+        android:id="@+id/et_russian_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:inputType="textMultiLine"
+        android:textSize="16sp"
+        android:textColor="@color/primary_text"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical"
+        android:hint="@string/translate"
+        android:textColorHint="@color/secondary_text"
+        android:minLines="5"
+        android:maxLines="8"
+        android:scrollbars="vertical"
+        android:autofillHints=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_russian_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

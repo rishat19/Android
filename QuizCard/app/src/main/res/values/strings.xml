@@ -3,4 +3,12 @@
     <string name="list_of_cards">Список карточек</string>
     <string name="start_quiz">Пройти quiz</string>
     <string name="logo">Логотип</string>
+    <string name="new_card">Новая карточка</string>
+    <string name="enter_text">Enter the text in English:</string>
+    <string name="translate">Введите перевод текста на русский язык:</string>
+    <string name="english">English:</string>
+    <string name="russian">Русский:</string>
+    <string name="card_info">Просмотр карточки</string>
+    <string name="flag_of_great_britain">Флаг Великобритании</string>
+    <string name="flag_of_russia">Флаг России</string>
 </resources>
