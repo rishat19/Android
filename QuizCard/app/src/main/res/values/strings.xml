@@ -11,4 +11,5 @@
     <string name="card_info">Просмотр карточки</string>
     <string name="flag_of_great_britain">Флаг Великобритании</string>
     <string name="flag_of_russia">Флаг России</string>
+    <string name="flag">Флаг</string>
 </resources>

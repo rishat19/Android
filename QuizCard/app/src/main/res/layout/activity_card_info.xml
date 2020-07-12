@@ -42,4 +42,62 @@
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp" />
 
+    <TextView
+        style="@style/TextView2"
+        android:id="@+id/tv_language"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <ImageView
+        android:id="@+id/flag"
+        android:contentDescription="@string/flag"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        style="@style/TextView1"
+        android:id="@+id/tv_card_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical"
+        android:lines="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_language" />
+
+    <Button
+        style="@style/Button1"
+        android:id="@+id/button_for_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_card_text" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

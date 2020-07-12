@@ -73,9 +73,9 @@
         android:contentDescription="@string/flag_of_great_britain"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/icon_great_britain"
         android:layout_marginEnd="36dp"
         android:layout_marginTop="28dp"
+        android:background="@drawable/icon_great_britain"
         app:layout_constraintTop_toBottomOf="@id/view1"
         app:layout_constraintEnd_toEndOf="parent"
         tools:srcCompat="@drawable/icon_great_britain" />
@@ -126,9 +126,9 @@
         android:contentDescription="@string/flag_of_russia"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/icon_russia"
         android:layout_marginEnd="36dp"
         android:layout_marginTop="28dp"
+        android:background="@drawable/icon_russia"
         app:layout_constraintTop_toBottomOf="@id/et_english_text"
         app:layout_constraintEnd_toEndOf="parent"
         tools:srcCompat="@drawable/icon_russia" />
