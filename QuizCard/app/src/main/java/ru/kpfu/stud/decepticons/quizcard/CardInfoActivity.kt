@@ -20,7 +20,7 @@ class CardInfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_card_info)
 
         val id = intent?.extras?.getInt("ID", -1) ?: 0
-        val card = CardsRepository.cards[id]
+        val card = CardsRepository.cards.find { it.id == id }
         showEnglishVersion(card)
         var languageFlag = false
 
@@ -40,17 +40,17 @@ class CardInfoActivity : AppCompatActivity() {
 
     }
 
-    private fun showEnglishVersion(card: Card) {
+    private fun showEnglishVersion(card: Card?) {
         tv_language.setText(R.string.english)
         flag.setImageResource(R.drawable.icon_great_britain)
-        tv_card_text.text = card.engText
+        tv_card_text.text = card?.engText
         button_for_translate.text = "Показать перевод"
     }
 
-    private fun showRussianVersion(card: Card) {
+    private fun showRussianVersion(card: Card?) {
         tv_language.setText(R.string.russian)
         flag.setImageResource(R.drawable.icon_russia)
-        tv_card_text.text = card.ruText
+        tv_card_text.text = card?.ruText
         button_for_translate.text = "Показать оригинал"
     }
 

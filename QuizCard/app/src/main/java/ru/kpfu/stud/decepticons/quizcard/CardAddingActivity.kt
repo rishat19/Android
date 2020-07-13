@@ -20,14 +20,15 @@ class CardAddingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_card_adding)
 
-        val englishTextRegex = Regex(pattern = "[A-Za-z][A-Za-z\\s\\-]*")
-        val russianTextRegex = Regex(pattern = "[А-Яа-я][А-Яа-я\\s\\-]*")
+        val englishTextRegex = Regex(pattern = "^(?![\\s\\-])[A-Za-z\\s\\-]+(?<![\\s\\-])\$")
+        val russianTextRegex = Regex(pattern = "^(?![\\s\\-])[А-Яа-я\\s\\-]+(?<![\\s\\-])\$")
 
         button_for_save.setOnClickListener {
             if (englishTextRegex.containsMatchIn(et_english_text.text) && russianTextRegex.containsMatchIn(et_russian_text.text)) {
                 val card = Card(CardsRepository.cards.size, et_english_text.text.toString(), et_russian_text.text.toString())
                 if (!CardsRepository.cards.contains(card)) {
                     CardsRepository.cards.add(card)
+                    CardsRepository.cards.sort()
                     et_english_text.text.clear()
                     et_russian_text.text.clear()
                     Toast.makeText(this, "Новая карточка успешно сохранена", Toast.LENGTH_LONG).show()

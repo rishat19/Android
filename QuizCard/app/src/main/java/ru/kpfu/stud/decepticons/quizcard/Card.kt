@@ -1,6 +1,6 @@
 package ru.kpfu.stud.decepticons.quizcard
 
-class Card(val id: Int, val engText: String, val ruText: String) {
+class Card(val id: Int, val engText: String, val ruText: String) : Comparable<Card>{
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -18,6 +18,10 @@ class Card(val id: Int, val engText: String, val ruText: String) {
 
     override fun toString(): String {
         return "$engText~$ruText"
+    }
+
+    override fun compareTo(other: Card): Int {
+        return this.engText.compareTo(other.engText)
     }
 
 }

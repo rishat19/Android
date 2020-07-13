@@ -23,6 +23,7 @@ class SplashActivity : AppCompatActivity() {
                 CardsRepository.cards.add(Card(id, it.split('~')[0], it.split('~')[1]))
                 id++
             }
+            CardsRepository.cards.sort()
         }
         if (id == 0) {
             CardsRepository.cards.add(Card(0, "Shark", "Акула"))
@@ -53,6 +54,7 @@ class SplashActivity : AppCompatActivity() {
             CardsRepository.cards.add(Card(25, "Seal", "Тюлень"))
             CardsRepository.cards.add(Card(26, "Duck", "Утка"))
             CardsRepository.cards.add(Card(27, "Tortoise", "Черепаха"))
+            CardsRepository.cards.sort()
         }
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
