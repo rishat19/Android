@@ -7,7 +7,6 @@ class Card(val id: Int, val engText: String, val ruText: String) {
         if (javaClass != other?.javaClass) return false
         val card = other as Card
         if (engText != card.engText) return false
-        if (ruText != card.ruText) return false
         return true
     }
 

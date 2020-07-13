@@ -6,10 +6,16 @@
     <string name="new_card">Новая карточка</string>
     <string name="enter_text">Enter the text in English:</string>
     <string name="translate">Введите перевод текста на русский язык:</string>
+    <string name="translate2">Enter the translation of the text into English:</string>
     <string name="english">English:</string>
     <string name="russian">Русский:</string>
     <string name="card_info">Просмотр карточки</string>
     <string name="flag_of_great_britain">Флаг Великобритании</string>
     <string name="flag_of_russia">Флаг России</string>
     <string name="flag">Флаг</string>
+    <string name="quiz">Quiz</string>
+    <string name="show_translation">Подсмотреть перевод</string>
+    <string name="good_job">Переведено 10 / 10</string>
+    <string name="very_good_job">Поздравляем! Вы верно перевели все карточки и успешно завершили Quiz!</string>
+    <string name="back_to_main">Вернуться на главную</string>
 </resources>

@@ -22,6 +22,9 @@
         <activity android:name=".ListOfCardsActivity" />
         <activity android:name=".CardInfoActivity" />
         <activity android:name=".CardAddingActivity" />
+        <activity android:name=".QuizFinishActivity" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".QuizLanguageSelectionActivity" />
     </application>
 
 </manifest>

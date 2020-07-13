@@ -4,9 +4,9 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_quiz_finish.*
 
-class MainActivity : AppCompatActivity() {
+class QuizFinishActivity : AppCompatActivity() {
 
     private lateinit var pref: SharedPreferences
     private val APP_PREFERENCES = "settings"
@@ -15,18 +15,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_quiz_finish)
 
-        button_for_list_of_cards.setOnClickListener {
-            val intent = Intent(this, ListOfCardsActivity::class.java)
+        button_back_to_main.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
-        button_for_quiz.setOnClickListener {
-            val intent = Intent(this, QuizLanguageSelectionActivity::class.java)
-            startActivity(intent)
-        }
-
     }
 
     override fun onStop() {
