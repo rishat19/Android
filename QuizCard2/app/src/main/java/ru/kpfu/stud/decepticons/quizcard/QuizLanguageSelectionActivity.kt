@@ -20,7 +20,7 @@ class QuizLanguageSelectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_quiz_language_selection)
 
         if (CardsRepository.cards.size == 0) {
-            Toast.makeText(this, "Ошибка! У вас нет карточек", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Ошибка! У вас нет карточек", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

@@ -3,12 +3,10 @@ package ru.kpfu.stud.decepticons.quizcard
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_card_info.*
-import kotlinx.android.synthetic.main.activity_card_info.button_back
-import kotlinx.android.synthetic.main.activity_list_of_cards.*
 
 class CardInfoActivity : AppCompatActivity() {
 
@@ -46,7 +44,7 @@ class CardInfoActivity : AppCompatActivity() {
         
         button_for_delete.setOnClickListener {
             CardsRepository.cards.remove(card)
-            Toast.makeText(this, "Карточка удалена", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Карточка удалена", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, ListOfCardsActivity::class.java)
             startActivity(intent)
         }

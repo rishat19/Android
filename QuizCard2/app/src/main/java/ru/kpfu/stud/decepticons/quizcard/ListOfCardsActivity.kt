@@ -17,7 +17,7 @@ class ListOfCardsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_of_cards)
 
-        button_for_add.setOnClickListener {
+        button_for_add.setOnClickListener{
             val intent = Intent(this, CardAddingActivity::class.java)
             startActivity(intent)
         }

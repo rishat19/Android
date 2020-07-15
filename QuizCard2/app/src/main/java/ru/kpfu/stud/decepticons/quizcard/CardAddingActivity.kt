@@ -3,12 +3,10 @@ package ru.kpfu.stud.decepticons.quizcard
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_card_adding.*
-import kotlinx.android.synthetic.main.activity_list_of_cards.*
-import kotlinx.android.synthetic.main.activity_list_of_cards.button_back
 
 class CardAddingActivity : AppCompatActivity() {
 
@@ -39,15 +37,15 @@ class CardAddingActivity : AppCompatActivity() {
                         CardsRepository.cards.sort()
                         et_english_text.text.clear()
                         et_russian_text.text.clear()
-                        Toast.makeText(this, "Новая карточка успешно сохранена", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Новая карточка успешно сохранена", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this, "Ошибка! Такая карточка уже существует", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Ошибка! Такая карточка уже существует", Toast.LENGTH_SHORT).show()
                     }
                 } else {
-                    Toast.makeText(this, "Ошибка! Слишком длинный текст. Допустимо не более 100 символов", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Ошибка! Слишком длинный текст. Допустимо не более 100 символов", Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(this, "Ошибка! Текст не введён или введён некорректно", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Ошибка! Текст не введён или введён некорректно", Toast.LENGTH_SHORT).show()
             }
         }
 

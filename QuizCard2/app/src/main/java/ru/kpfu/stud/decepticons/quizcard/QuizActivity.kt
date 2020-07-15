@@ -6,6 +6,7 @@ import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_quiz.*
 import java.util.*
 
@@ -52,19 +53,19 @@ class QuizActivity : AppCompatActivity() {
                 if (et_translation.text.toString().toLowerCase(Locale.ROOT) == quizQueue.peek().ruText.toLowerCase(Locale.ROOT)) {
                     count++
                     quizQueue.remove()
-                    Toast.makeText(this, "Правильно!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Правильно!", Toast.LENGTH_SHORT).show()
                 } else {
                     quizQueue.add(quizQueue.poll())
-                    Toast.makeText(this, "Ошибка!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Ошибка!", Toast.LENGTH_SHORT).show()
                 }
             } else {
                 if (et_translation.text.toString().toLowerCase(Locale.ROOT) == quizQueue.peek().engText.toLowerCase(Locale.ROOT)) {
                     count++
                     quizQueue.remove()
-                    Toast.makeText(this, "Правильно!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Правильно!", Toast.LENGTH_SHORT).show()
                 } else {
                     quizQueue.add(quizQueue.poll())
-                    Toast.makeText(this, "Ошибка!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Ошибка!", Toast.LENGTH_SHORT).show()
                 }
             }
             if (quizQueue.isEmpty()) {
@@ -84,9 +85,17 @@ class QuizActivity : AppCompatActivity() {
 
         button_for_translate.setOnClickListener {
             if (flag) {
-                Toast.makeText(this, quizQueue.peek().ruText, Toast.LENGTH_LONG).show()
+                Snackbar.make(
+                    findViewById(android.R.id.content),
+                    quizQueue.peek().ruText,
+                    Snackbar.LENGTH_SHORT
+                ).show()
             } else {
-                Toast.makeText(this, quizQueue.peek().engText, Toast.LENGTH_LONG).show()
+                Snackbar.make(
+                    findViewById(android.R.id.content),
+                    quizQueue.peek().engText,
+                    Snackbar.LENGTH_SHORT
+                ).show()
             }
         }
 
